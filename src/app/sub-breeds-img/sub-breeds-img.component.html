@@ -1,0 +1,10 @@
+<button [routerLink]="['']" > All Dogs </button>
+<button [routerLink]="['/breed',name]">Back to {{ name | titlecase}}</button>
+<br>
+<h2>{{ name | titlecase}}</h2>
+
+<h3> {{ subBreed | titlecase}}</h3>
+<br>
+<div>
+    <img src="{{ imageSource }}" alt="{{ subBreed }}">
+</div>

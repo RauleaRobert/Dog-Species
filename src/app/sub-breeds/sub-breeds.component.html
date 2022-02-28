@@ -1,0 +1,16 @@
+<button [routerLink]="['']" > All Dogs </button>
+<br>
+<h2>{{ name | titlecase}}</h2> 
+
+<div>
+    <img src="{{ images }}" alt="{{ name }}">
+</div>
+
+<hr>
+<h2>Sub-Breeds</h2>
+<div *ngFor="let subBreed of subBreeds">
+   <a [routerLink]="['/breed',name,subBreed]"> {{ subBreed | titlecase}} </a> 
+</div>
+<div *ngIf="subBreeds.length == 0">
+    <h5> Sub-breed doesn't exist </h5>
+</div>
