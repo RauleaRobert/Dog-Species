@@ -9,16 +9,16 @@ import {ButtonModule} from 'primeng/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BreedsComponent } from './breeds/breeds.component';
-import { SubBreedsComponent } from './sub-breeds/sub-breeds.component';
-import { SubBreedsImgComponent } from './sub-breeds-img/sub-breeds-img.component';
+import { DogsComponent } from './dogs/dogs.component';
+import { BreedComponent } from './breed/breed.component';
+import { SubBreedComponent } from './sub-breed/sub-breed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BreedsComponent,
-    SubBreedsComponent,
-    SubBreedsImgComponent,
+    DogsComponent,
+    BreedComponent,
+    SubBreedComponent,
     
   ],
   imports: [

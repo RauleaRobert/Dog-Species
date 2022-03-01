@@ -4,15 +4,15 @@
 <h2>{{ name | titlecase}}</h2> 
 
 <div>
-    <img src="{{ images }}"class="rounded mx-auto d-block" alt="{{ name }}">
+    <img src="{{ imagePath }}"class="rounded mx-auto d-block" alt="{{ name }}">
 </div>
 
 <hr>
 <h2>Sub-Breeds</h2>
-<div *ngFor="let subBreed of subBreeds">
+<div *ngFor="let subBreed of subBreedNames">
     <a href="#" class="nav-link link-dark" [routerLink]="['/breed',name,subBreed]"> 
-    {{ subBreed | titlecase}} </a> 
+    {{ subBreed | titlecase }} </a> 
 </div>
-<div *ngIf="subBreeds.length == 0">
+<div *ngIf="subBreedNames.length == 0">
     <h5> Sub-breed doesn't exist </h5>
 </div>

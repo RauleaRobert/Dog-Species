@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SubBreedsComponent } from './sub-breeds/sub-breeds.component';
-import { BreedsComponent } from './breeds/breeds.component';
-import { SubBreedsImgComponent } from './sub-breeds-img/sub-breeds-img.component';
+import { BreedComponent } from './breed/breed.component';
+import { DogsComponent } from './dogs/dogs.component';
+import { SubBreedComponent } from './sub-breed/sub-breed.component';
 
 const routes: Routes = [
   { 
     path: '',
-    component: BreedsComponent
+    component: DogsComponent
   },
   { 
-    path: 'breed/:name',
-    component: SubBreedsComponent
+    path: 'breed/:breedName',
+    component: BreedComponent
   },
   {
-    path: 'breed/:name/:subBreed',
-    component: SubBreedsImgComponent
+    path: 'breed/:breedName/:subBreedName',
+    component: SubBreedComponent
   }
 ];
 

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-breeds',
-  templateUrl: './breeds.component.html',
-  styleUrls: ['./breeds.component.css']
+  selector: 'app-dogs',
+  templateUrl: './dogs.component.html',
+  styleUrls: ['./dogs.component.css']
 })
-export class BreedsComponent implements OnInit {
+export class DogsComponent implements OnInit {
 
   breeds: string[] = [];
 
@@ -18,12 +18,7 @@ export class BreedsComponent implements OnInit {
         for(let breed in data.message){
           this.breeds.push(breed)
         }
-        console.log(this.breeds);
-        
       }
     )
   }
-
-
-  
 }
