@@ -1,0 +1,8 @@
+<div *ngFor="let breed of breeds" >
+    <a href="#" class="nav-link link-dark" [routerLink]="['/breed',breed]" > 
+    {{ breed | titlecase}}
+    </a>
+</div>
+
+
+

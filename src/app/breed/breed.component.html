@@ -1,0 +1,18 @@
+<button pButton pRipple type="button" class="p-button-rounded" [routerLink]="['']" >
+    All Dogs </button>
+<br>
+<h2>{{ name | titlecase}}</h2> 
+
+<div>
+    <img src="{{ imagePath }}"class="rounded mx-auto d-block" alt="{{ name }}">
+</div>
+
+<hr>
+<h2>Sub-Breeds</h2>
+<div *ngFor="let subBreed of subBreedName">
+    <a href="#" class="nav-link link-dark" [routerLink]="['/breed',name,subBreed]"> 
+    {{ subBreed | titlecase}} </a> 
+</div>
+<div *ngIf="subBreedName.length == 0">
+    <h5> Sub-breed doesn't exist </h5>
+</div>
