@@ -1,15 +1,17 @@
-<button [routerLink]="['']" > All Dogs </button>
+<button pButton pRipple type="button" class="p-button-rounded" [routerLink]="['']" >
+    All Dogs </button>
 <br>
 <h2>{{ name | titlecase}}</h2> 
 
 <div>
-    <img src="{{ images }}" alt="{{ name }}">
+    <img src="{{ images }}"class="rounded mx-auto d-block" alt="{{ name }}">
 </div>
 
 <hr>
 <h2>Sub-Breeds</h2>
 <div *ngFor="let subBreed of subBreeds">
-   <a [routerLink]="['/breed',name,subBreed]"> {{ subBreed | titlecase}} </a> 
+    <a href="#" class="nav-link link-dark" [routerLink]="['/breed',name,subBreed]"> 
+    {{ subBreed | titlecase}} </a> 
 </div>
 <div *ngIf="subBreeds.length == 0">
     <h5> Sub-breed doesn't exist </h5>
