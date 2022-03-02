@@ -1,5 +1,13 @@
-<ul *ngFor="let breed of breeds" >
-    <a href="#" class="nav-link link-dark" [routerLink]="['/breed',breed]" > 
-    {{ breed | titlecase }}
-    </a>
-</ul>
+<span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input pInputText class="p-inputtext-sm" type="text" name="searchText" [(ngModel)]="searchText"
+        aria-describedby="search-text" placeholder="Search" autofocus>
+</span>
+
+<div *ngFor="let breed of breeds | searchFilter: searchText">
+    <p href="#" class="nav-link link-dark" [routerLink]="['/breed',breed]" 
+        appHighlight [searchedWord]="searchText" [content]="breed | titlecase"  
+        [classToApply]="'font-weight-bold'" [setTitle]= "true"> 
+        {{ breed | titlecase }}
+    </p>
+</div>

@@ -9,6 +9,7 @@ import { ApiService } from '../api.service';
 export class DogsComponent implements OnInit {
 
   breeds: string[] = [];
+  searchText: string = '';
 
   constructor(private readonly apiService: ApiService) { }
 
