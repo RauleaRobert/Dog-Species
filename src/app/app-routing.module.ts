@@ -15,7 +15,7 @@ const routes: Routes = [
     component: BreedComponent
   },
   {
-    path: 'breed/:breedName/:subBreedName',
+    path: 'breed/:breedName/:subBreedNames',
     component: SubBreedComponent
   },
   {

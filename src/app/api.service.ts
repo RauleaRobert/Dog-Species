@@ -26,8 +26,8 @@ export class ApiService {
     return this.httpClient.get<any>(this.BREEDS_URL + '/breed/' + name + '/images/random')
   }
 
-  public getSource (obj: any) {
-    return this.httpClient.get<any>(this.BREEDS_URL + '/breed/' + obj.name +'/'+ obj.subBreed +'/images/random'  )
+  public getSource (breedName: string, subBreedName: string) {
+    return this.httpClient.get<any>(this.BREEDS_URL + '/breed/' + breedName +'/'+ subBreedName +'/images/random'  )
   }
 
 }

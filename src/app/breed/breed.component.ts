@@ -14,7 +14,7 @@ export class BreedComponent implements OnInit {
   imagePath : string = '';
   
   constructor(
-    private route: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private readonly apiService: ApiService
   ) { }
 
@@ -25,14 +25,14 @@ export class BreedComponent implements OnInit {
   }
 
   getBreedName () {
-    this.route.params.subscribe(params => {
+    this.activatedRoute.params.subscribe(params => {
       this.name = params['breedName'];
     })
   }
 
   getSubBreedName () {
-        this.apiService.getSubBreeds(this.name).subscribe(
-      data => {
+    this.apiService.getSubBreeds(this.name).subscribe(
+      (data) => {
         for(let subBreed in data.message){
           this.subBreedNames.push(data.message[subBreed])
         }
@@ -41,9 +41,9 @@ export class BreedComponent implements OnInit {
   }
 
   getImagePath () {
-      this.apiService.getImage(this.name).subscribe(
-     img => {
-      this.imagePath = img.message;
+    this.apiService.getImage(this.name).subscribe(
+     (img) => {
+        this.imagePath = img.message;
       } 
     )
   }
