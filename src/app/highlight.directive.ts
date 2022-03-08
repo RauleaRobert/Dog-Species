@@ -13,10 +13,6 @@ export class HighlightDirective implements OnChanges{
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.setTitle);
-    console.log(this.classToApply);
-    console.log(this.searchedWord);
-    console.log(this.el);
 
     if (!this.content) {
       return;

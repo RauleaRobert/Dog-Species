@@ -1,13 +1,18 @@
 <span class="p-input-icon-left">
     <i class="pi pi-search"></i>
-    <input pInputText class="p-inputtext-sm" type="text" name="searchText" [(ngModel)]="searchText"
+    <input pInputText class="p-inputtext-sm" (input)="filterDogs($event)" type="text" name="searchText" [(ngModel)]="searchText"
         aria-describedby="search-text" placeholder="Search" autofocus>
 </span>
 
-<div *ngFor="let breed of breeds | searchFilter: searchText">
-    <p href="#" class="nav-link link-dark" [routerLink]="['/breed',breed]" 
-        appHighlight [searchedWord]="searchText" [content]="breed | titlecase"  
-        [classToApply]="'font-weight-bold'" [setTitle]= "true"> 
-        {{ breed | titlecase }}
-    </p>
-</div>
+<ul style="list-style-type: none;" href="#" class="nav-link link-dark">
+    <ng-container *ngFor="let breed of filteredDogs">
+        <li class="caret" [routerLink]="['/breed',breed.breedNames]">
+            {{ breed.breedNames | titlecase}}
+            <ul class="nested" *ngFor="let subBreed of breed.subBreedNames">
+                <li [routerLink]="['/breed',breed.breedNames,subBreed]"> 
+                    {{ subBreed | titlecase}} 
+                </li>
+            </ul>
+        </li>
+    </ng-container>
+</ul>

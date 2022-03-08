@@ -16,7 +16,8 @@ import { DogsComponent } from './dogs/dogs.component';
 import { BreedComponent } from './breed/breed.component';
 import { SubBreedComponent } from './sub-breed/sub-breed.component';
 import { SearchFilterPipe } from './search-filter.pipe'; // --> Search Pipe
-import { HighlightDirective } from './highlight.directive'; 
+import { HighlightDirective } from './highlight.directive';
+import { NotFoundComponent } from './not-found/not-found.component'; 
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { HighlightDirective } from './highlight.directive';
     BreedComponent,
     SubBreedComponent,
     SearchFilterPipe,  // -> added filter pipe to use it inside the component
-    HighlightDirective,
+    HighlightDirective, NotFoundComponent,
   ],
   imports: [
     BrowserModule,
