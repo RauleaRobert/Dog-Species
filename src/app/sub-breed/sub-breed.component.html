@@ -1,8 +1,9 @@
-<button pButton pRipple type="button" class="p-button-rounded" [routerLink]="['']" > All Dogs
+<button pButton pRipple type="button" class="p-button-rounded" [routerLink]="['']" >
+            All Dogs
 </button>
-<button pButton pRipple type="button" class="p-button-rounded" [routerLink]="['/breed', name]">Back to {{ name | titlecase}} </button>
+<button pButton pRipple type="button" class="p-button-rounded" [routerLink]="['/breed', breedName]">Back to {{ breedName | titlecase}} </button>
 <br>
-<h2>{{ name | titlecase }}</h2>
+<h2>{{ breedName | titlecase }}</h2>
 
 <h3> {{ subBreedName | titlecase }}</h3>
 <br>

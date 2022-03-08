@@ -1,9 +1,9 @@
 export class Dog {
-    breedNames: string;
+    breedName: string;
     subBreedNames: string[];
 
     constructor(obj: any){
-        this.breedNames = obj.breedNames,
+        this.breedName = obj.breedName,
         this.subBreedNames = obj.subBreedNames
     }
 }

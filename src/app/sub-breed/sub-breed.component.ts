@@ -8,23 +8,23 @@ import { ApiService } from '../api.service';
   styleUrls: ['./sub-breed.component.css']
 })
 export class SubBreedComponent implements OnInit {
-  name:string = '';
+  breedName:string = '';
   subBreedName: string = '';
   imagePath: string = '';
 
   constructor(
-    private route: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private readonly apiService: ApiService
     ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.name = params['breedName'];
-      this.subBreedName = params['subBreedName']
+    this.activatedRoute.params.subscribe(params => {
+      this.breedName = params['breedName'];
+      this.subBreedName = params['subBreedNames']
     });
 
-    this.apiService.getSource({name:this.name, subBreed: this.subBreedName}).subscribe(
-      data => {
+    this.apiService.getSource(this.breedName,this.subBreedName).subscribe(
+      (data)=> {
         this.imagePath = data.message;
       }
     );

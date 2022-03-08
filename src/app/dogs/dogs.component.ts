@@ -18,7 +18,6 @@ export class DogsComponent implements OnInit {
 
   ngOnInit(): void {
     this.prepareDogs();
-    
   }
 
   private prepareDogs(){
@@ -36,7 +35,7 @@ export class DogsComponent implements OnInit {
     
     for(const key of Object.keys(dogObject)) {
       dogs.push(new Dog({
-        breedNames: key,
+        breedName: key,
         subBreedNames: dogObject[key]
       }));
     }
@@ -47,7 +46,7 @@ export class DogsComponent implements OnInit {
     const text = event.target.value;
 
     this.filteredDogs = this.breeds.filter(
-      (dog: Dog) => dog.breedNames?.includes(text)
+      (dog: Dog) => dog.breedName?.includes(text)
     )
   }
 }
