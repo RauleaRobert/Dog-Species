@@ -6,9 +6,9 @@
 
 <ul style="list-style-type: none;" href="#" class="nav-link link-dark">
     <ng-container *ngFor="let breed of filteredDogs">
-        <li class="caret" [routerLink]="['/breed',breed.breedName]">
+        <li [appHighlight]="searchText" [filtredList]="breed.breedName" [routerLink]="['/breed',breed.breedName]">
             {{ breed.breedName | titlecase}}
-            <ul class="nested" *ngFor="let subBreed of breed.subBreedNames">
+            <ul  *ngFor="let subBreed of breed.subBreedNames">
                 <li [routerLink]="['/breed',breed.breedName,subBreed]"> 
                     {{ subBreed | titlecase}} 
                 </li>

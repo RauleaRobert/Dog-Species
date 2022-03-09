@@ -7,12 +7,12 @@ import { Dog } from '../dog';
   templateUrl: './dogs.component.html',
   styleUrls: ['./dogs.component.css']
 })
-export class DogsComponent implements OnInit {
+export class DogsComponent implements OnInit{
 
   public breeds: Dog[] = [];
   public filteredDogs: Dog[] = [];
-
-  searchText: string = '';
+  
+  public searchText: string = '';
 
   constructor(private readonly apiService: ApiService) { }
 
