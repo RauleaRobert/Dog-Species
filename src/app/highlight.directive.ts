@@ -11,12 +11,12 @@ export class HighlightDirective implements OnChanges{
   constructor(private el: ElementRef, private renderer: Renderer2) { }
   
   ngOnChanges(): void {
-    this.replaceWithHighlight(this.appHighlight, this.filtredList)
+    this.replaceWithHighlight(this.appHighlight.toLocaleLowerCase(), this.filtredList)
   }
 
   replaceWithHighlight(searchWorld: string, list: string){
-    if(searchWorld.toLocaleLowerCase()){
-      list = list.replace(`${searchWorld.toLocaleLowerCase()}` , `${'<span class="myClass" >' + `${searchWorld}` + '</span>'}` );
+    if(searchWorld){
+      list = list.replace(`${searchWorld}` , `${'<span class="myClass" >' + `${searchWorld}` + '</span>'}` );
       this.changeText(list)
     }else {
       this.changeText(this.filtredList)
