@@ -20,9 +20,9 @@ export class DogsComponent implements OnInit{
     this.prepareDogs();
   }
 
-  private prepareDogs(){
+  private prepareDogs(){ // JSON -> transform to Object
     this.apiService.getBreeds().subscribe(
-      (data)=>{
+      (data) => {
         this.breeds = this.getListOfDogs(data.message);
         this.filteredDogs = this.breeds;
         
@@ -46,7 +46,7 @@ export class DogsComponent implements OnInit{
     const text = event.target.value;
 
     this.filteredDogs = this.breeds.filter(
-      (dog: Dog) => dog.breedName?.includes(text)
+      (dog: Dog) => dog.breedName?.includes(text.toLowerCase())
     )
   }
 }
