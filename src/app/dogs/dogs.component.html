@@ -6,12 +6,14 @@
 
 <ul style="list-style-type: none;" href="#" class="nav-link link-dark">
     <ng-container *ngFor="let breed of filteredDogs">
-        <li [appHighlight]="searchText" [filtredList]="breed.breedName" [routerLink]="['/breed',breed.breedName]" style="text-transform:capitalize;">
-            {{ breed.breedName }}
-            <ul  *ngFor="let subBreed of breed.subBreedNames">
-                <li [routerLink]="['/breed',breed.breedName,subBreed]"> 
-                    {{ subBreed }} 
-                </li>
+        <li [appHighlight]="searchText" [routerLink]="['/breed',breed.breedName]" id="breed_element">
+            {{ breed.breedName | titlecase}}
+            <ul>
+                <ng-container *ngFor="let subBreed of breed.subBreedNames" >
+                    <li [routerLink]="['/breed',breed.breedName,subBreed]" > 
+                        {{ subBreed | titlecase}} 
+                    </li>
+                </ng-container>
             </ul>
         </li>
     </ng-container>

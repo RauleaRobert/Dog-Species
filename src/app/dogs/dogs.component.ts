@@ -43,10 +43,10 @@ export class DogsComponent implements OnInit{
   }
 
   public filterDogs(event: any){
-    const text = event.target.value;
+    const text = event.target.value.toLocaleLowerCase();
 
     this.filteredDogs = this.breeds.filter(
-      (dog: Dog) => dog.breedName?.includes(text.toLowerCase())
+      (dog: Dog) => dog.breedName?.includes(text)
     )
   }
 }
