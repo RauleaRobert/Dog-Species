@@ -7,12 +7,12 @@ import { Dog } from '../dog';
   templateUrl: './dogs.component.html',
   styleUrls: ['./dogs.component.css']
 })
-export class DogsComponent implements OnInit {
+export class DogsComponent implements OnInit{
 
   public breeds: Dog[] = [];
   public filteredDogs: Dog[] = [];
-
-  searchText: string = '';
+  
+  public searchText: string = '';
 
   constructor(private readonly apiService: ApiService) { }
 
@@ -20,9 +20,9 @@ export class DogsComponent implements OnInit {
     this.prepareDogs();
   }
 
-  private prepareDogs(){
+  private prepareDogs(){ // JSON -> transform to Object
     this.apiService.getBreeds().subscribe(
-      (data)=>{
+      (data) => {
         this.breeds = this.getListOfDogs(data.message);
         this.filteredDogs = this.breeds;
         
@@ -43,7 +43,7 @@ export class DogsComponent implements OnInit {
   }
 
   public filterDogs(event: any){
-    const text = event.target.value;
+    const text = event.target.value.toLocaleLowerCase();
 
     this.filteredDogs = this.breeds.filter(
       (dog: Dog) => dog.breedName?.includes(text)
