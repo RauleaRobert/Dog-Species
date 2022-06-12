@@ -23,10 +23,10 @@ export class ApiService {
   }
 
   public getImage(name:string) {
-    return this.httpClient.get<any>(this.BREEDS_URL + '/breed/' + name + '/images/random')
+    return this.httpClient.get<any>(this.BREEDS_URL + '/breed/' + name.toLowerCase().replace(/ /g,'') + '/images/random')
   }
 
-  public getSource (breedName: string, subBreedName: string) {
+  public getSource (breedName: string, subBreedName?: string) {
     return this.httpClient.get<any>(this.BREEDS_URL + '/breed/' + breedName +'/'+ subBreedName +'/images/random'  )
   }
 

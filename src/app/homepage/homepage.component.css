@@ -1,0 +1,37 @@
+ .homeTitle{
+	text-align: center;
+}
+
+.mainButtons{
+	text-align: center;
+}
+
+.postBtn{
+	margin: auto;
+	min-width: auto;
+	max-width: auto;
+	min-height: 2em;
+	max-height: 2em;
+}
+
+.inputComment{
+	min-height: 4em;
+	max-height: 4em;
+}
+
+.inputName{
+	min-height: 2em;
+	max-height: 2em;
+}
+
+.makePost{
+	display: grid;
+	margin: 1em auto;
+	border: solid 1px rgb(88, 88, 150);
+	background-color: white;
+	border-radius: 0.5em;
+	min-width: 50em;
+	max-width: 50em;
+	min-height: auto;
+	max-height: auto;
+}

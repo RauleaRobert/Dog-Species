@@ -12,15 +12,17 @@ export class SubBreedComponent implements OnInit {
   subBreedName: string = '';
   imagePath: string = '';
 
+  message:string = "";
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private readonly apiService: ApiService
     ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
-      this.breedName = params['breedName'];
-      this.subBreedName = params['subBreedNames']
+		this.activatedRoute.params.subscribe(params => {
+		this.breedName = params['breedName'];
+		this.subBreedName = params['subBreedNames']
     });
 
     this.apiService.getSource(this.breedName,this.subBreedName).subscribe(

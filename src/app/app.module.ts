@@ -18,6 +18,8 @@ import { SubBreedComponent } from './sub-breed/sub-breed.component';
 import { SearchFilterPipe } from './search-filter.pipe'; // --> Search Pipe
 import { HighlightDirective } from './highlight.directive';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -28,7 +30,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SubBreedComponent,
     SearchFilterPipe,  // -> added filter pipe to use it inside the component
     HighlightDirective, 
-    NotFoundComponent, 
+    NotFoundComponent, HomepageComponent, PostComponent, 
   ],
   imports: [
     BrowserModule,

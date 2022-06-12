@@ -1,0 +1,36 @@
+.post{
+	margin: auto;
+	/* text-align: center; */
+	border: solid 1px rgb(88, 88, 150);
+	background-color: white;
+	border-radius: 0.5em;
+	min-width: 50em;
+	max-width: 50em;
+	min-height: auto;
+	max-height: auto;
+}
+
+p{
+	margin: 0.2em;
+	border-radius: 10%;
+	border: solid 1px rgb(161, 161, 242);
+}
+
+.breedPhoto{
+	margin: auto;
+	background-color: rgb(225, 225, 225);
+	border-radius: 0.5em;
+	min-width: 25em;
+	max-width: 25em;
+	min-height: 25em;
+	max-height: 25em;
+}
+
+.image{
+	margin: auto;
+	border-radius: 0.5em;
+	min-width: 25em;
+	max-width: 25em;
+	min-height: 25em;
+	max-height: 25em;
+}

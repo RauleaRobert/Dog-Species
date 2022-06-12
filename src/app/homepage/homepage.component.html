@@ -1,0 +1,20 @@
+<h3 class="homeTitle">Dogs Facebook</h3>
+<div class="mainButtons">
+	<span>
+		<button pButton pRipple type="button" [routerLink]="['breeds']">Breeds</button>
+		<button pButton pRipple type="button">About</button>
+		<button pButton pRipple type="button">Concept</button>
+	</span>
+</div>
+<ng-container class="container">
+	<div class="makePost">
+		<input type="text" #Name pInputText class="inputName" placeholder="Your Dog Breed">
+
+		<input type="text" #Comment pInputText class="inputComment" placeholder="Your Comment">
+		<button pButton class="postBtn" [disabled]="!Name.value || !Comment.value" (click)="addComment(Name.value, Comment.value)">Post</button>
+	</div>
+	<ng-container *ngFor="let data of posts">
+		<app-post [user]="data"></app-post>
+	</ng-container>
+</ng-container>
+
