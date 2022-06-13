@@ -4,4 +4,29 @@
 		<img class="image" src="{{ imagePath }}" alt= "{{user.dog}}">
 	</div>
 	<p>{{user.comment}}</p>
+	<div>
+		<div class="reations">
+			<span>
+				<div class="likes" id="like">
+					<i class="bi bi-hand-thumbs-up"></i> {{likes}}
+				</div>
+				<div class="likes" id="comment">
+					<i class="bi bi-chat-left"></i> {{comments}}
+				</div>
+			</span>
+		</div>
+		<span>
+			<button class="like" (click)="likeBtn()">
+				<i class="bi bi-hand-thumbs-up"></i>
+			</button>
+			<button class="like" (click)="commentBtn()">
+				<i class="bi bi-chat-left"></i>
+			</button>
+		</span>
+		<div class="comment">
+			<span>
+				<input type="text" #Comment pInputText class="inputComment" placeholder="Your Comment">
+			</span>
+		</div>
+	</div>
 </div>

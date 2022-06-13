@@ -5,6 +5,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccordionModule } from 'primeng/accordion';     //accordion and accordion tab
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 import { InputTextModule } from 'primeng/inputtext';
 
@@ -30,10 +32,13 @@ import { PostComponent } from './post/post.component';
     SubBreedComponent,
     SearchFilterPipe,  // -> added filter pipe to use it inside the component
     HighlightDirective, 
-    NotFoundComponent, HomepageComponent, PostComponent, 
+    NotFoundComponent, 
+	HomepageComponent, 
+	PostComponent, 
   ],
   imports: [
     BrowserModule,
+	FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
     NgbModule,

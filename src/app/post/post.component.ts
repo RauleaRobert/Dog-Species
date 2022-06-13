@@ -10,6 +10,8 @@ export class PostComponent implements OnInit {
 	@Input() user: any;
 
 	imagePath: string = '';
+	likes: number = 0;
+	comments: number = 0;
 
 	constructor(
 		private readonly apiService: ApiService
@@ -21,5 +23,13 @@ export class PostComponent implements OnInit {
 			this.imagePath = img.message;
 		} 
 	)	
+  }
+
+  likeBtn() {
+	this.likes++
+  }
+
+  commentBtn() {
+	this.comments++
   }
 }

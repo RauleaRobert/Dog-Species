@@ -14,23 +14,77 @@ p{
 	margin: 0.2em;
 	border-radius: 10%;
 	border: solid 1px rgb(161, 161, 242);
+	word-wrap: break-word;
 }
 
 .breedPhoto{
 	margin: auto;
-	background-color: rgb(225, 225, 225);
+	background-color: rgb(255, 243, 214);
 	border-radius: 0.5em;
-	min-width: 25em;
-	max-width: 25em;
+	min-width: 48em;
+	max-width: 48em;
 	min-height: 25em;
 	max-height: 25em;
 }
 
 .image{
-	margin: auto;
+	margin: 0 25%;
 	border-radius: 0.5em;
 	min-width: 25em;
 	max-width: 25em;
 	min-height: 25em;
 	max-height: 25em;
+}
+
+.reations{
+	display: flex;
+	margin: auto;
+	border-radius: 0.5em;
+	min-width: auto;
+	max-width: auto;
+	min-height: auto;
+	max-height: auto;
+}
+
+.comment{
+	margin: 0.25em;
+	border-radius: 0.5em;
+	min-width: auto;
+	max-width: auto;
+	min-height: 4em;
+	max-height: 4em;
+}
+
+.inputComment{
+	margin: auto;
+	min-width: 49.5em;
+	max-width: 49.5em;
+	min-height: 2em;
+	max-height: 2em;
+}
+
+.likes{
+	min-width: 24em;
+	max-width: 24em;
+	min-height: 1.3em;
+	max-height: 1.3em;
+}
+
+.like{
+	background-color: white;
+	border: solid 1px black;
+	border-radius: 1em;
+	min-width: 3em;
+	max-width: 3em;
+	min-height: 1.3em;
+	max-height: 1.3em;
+}
+
+#like{
+	float: inline-start;
+}
+
+#comment{
+	float: inline-end;
+	text-align: right;
 }
